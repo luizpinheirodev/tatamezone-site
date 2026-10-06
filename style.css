@@ -1,0 +1,78 @@
+:root {
+  --bg: #0d1220;
+  --surface: #141c2e;
+  --border: #243050;
+  --text: #f0f2f8;
+  --text-dim: #9aa8c4;
+  --accent: #12c4c4;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent); }
+
+.wrap { max-width: 720px; margin: 0 auto; padding: 32px 16px 64px; }
+
+header.site {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+header.site img { width: 44px; height: 44px; border-radius: 10px; }
+header.site a { color: var(--text); text-decoration: none; font-weight: 800; font-size: 20px; letter-spacing: -0.01em; }
+header.site a span { color: var(--accent); }
+
+h1 { font-size: clamp(28px, 6vw, 40px); line-height: 1.15; margin: 0 0 12px; letter-spacing: -0.02em; }
+h2 { font-size: 20px; margin: 40px 0 12px; }
+h3 { font-size: 16px; margin: 0 0 6px; }
+p { margin: 0 0 12px; color: var(--text-dim); }
+.lead { font-size: 18px; }
+.muted { font-size: 13px; color: var(--text-dim); opacity: 0.8; }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 12px;
+}
+.card p:last-child { margin-bottom: 0; }
+
+.contact {
+  border-color: var(--accent);
+  margin: 24px 0 8px;
+}
+.contact a.email { font-size: 20px; font-weight: 700; text-decoration: none; word-break: break-all; }
+
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #0d1220;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  margin: 8px 8px 0 0;
+}
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+
+ol { padding-left: 20px; color: var(--text-dim); margin: 0 0 12px; }
+
+footer {
+  margin-top: 56px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--text-dim);
+}
+footer a { margin-right: 16px; }
